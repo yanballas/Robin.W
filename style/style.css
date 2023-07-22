@@ -169,11 +169,11 @@ body {
 }
 
 .hero-section_content_card_front {
-    background-image: url(/img/mainPhotoXXLFront.png);
+    background-image: url(../img/mainPhotoXXLFront.png);
 }
 
 .hero-section_content_card_back {
-    background-image: url(/img/mainPhotoXXLBack.png);
+    background-image: url(../img/mainPhotoXXLBack.png);
     -webkit-transform: rotateY(180deg);
     -moz-transform: rotateY(180deg);
     transform: rotateY(180deg);
