@@ -127,7 +127,7 @@ body {
     height: 79%;
     position: absolute;
     left: 0;
-    top: 80px;
+    top: 5.5rem;
     z-index: 3;
     -webkit-animation: pulse 4.5s ease infinite;
     -moz-animation: pulse 4.5s ease infinite;;
