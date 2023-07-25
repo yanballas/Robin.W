@@ -65,9 +65,9 @@ body {
     top: 0;
     right: 0;
     z-index: 2;
-    -webkit-animation: pulse 4s ease infinite;
-    -moz-animation: pulse 4s ease infinite;
-    animation: pulse 4s ease infinite;
+    -webkit-animation: pulse 4.5s ease infinite;
+    -moz-animation: pulse 4.5s ease infinite;
+    animation: pulse 4.5s ease infinite;
 }
 
 .hero-section-nav {
