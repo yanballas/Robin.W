@@ -191,10 +191,14 @@ p.experience-section_subtitle {
 }
 
 h2.experience-section_title {
+    opacity: 1;
     font-size: 55px;
     line-height: 120%;
     margin-bottom: 2.5rem;
     font-weight: 700;
+    -webkit-transition: all 2.5s ease;
+    -moz-transition: all 2.5s ease;
+    transition: all 2.5s ease;
 }
 
 .experience-section_items {
@@ -235,6 +239,10 @@ h2.experience-section_title {
 
 .experience-section_items_card:nth-child(3) > p:nth-child(2) > b > span {
     color: #E95D90;
+}
+
+h2._hidden {
+    opacity: 0;
 }
 
 ._show {

@@ -34,17 +34,20 @@ window.addEventListener('DOMContentLoaded', () => {
     const changeText = (elem, newtext) => {
         const elemTextDefault = elem.innerHTML;
         setInterval(() => {
-            if (elem.textContent === elemTextDefault) {
-                elem.innerHTML = newtext;
-            } else {
-                elem.innerHTML = elemTextDefault;
-            }
-
-        }, 4000)
+            elem.classList.add('_hidden')
+            setTimeout(() => {
+                if (elem.textContent === elemTextDefault) {
+                    elem.innerHTML = newtext;
+                } else {
+                    elem.innerHTML = elemTextDefault;
+                }
+                elem.classList.remove('_hidden')
+            }, 2000)
+        }, 6000)
     }
-
+    
     fixedMenu();
     slider(headerSlider);
-    // changeText(experienceTextElem, 'a');
+    changeText(experienceTextElem, 'This allowed me to gain valuable experience');
 
 })
