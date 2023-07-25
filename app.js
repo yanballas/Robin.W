@@ -29,7 +29,22 @@ window.addEventListener('DOMContentLoaded', () => {
         }, 4000)
     }
 
+    const experienceTextElem = document.querySelector('.experience-section_title');
+
+    const changeText = (elem, newtext) => {
+        const elemTextDefault = elem.innerHTML;
+        setInterval(() => {
+            if (elem.textContent === elemTextDefault) {
+                elem.innerHTML = newtext;
+            } else {
+                elem.innerHTML = elemTextDefault;
+            }
+
+        }, 4000)
+    }
+
     fixedMenu();
     slider(headerSlider);
+    // changeText(experienceTextElem, 'a');
 
 })

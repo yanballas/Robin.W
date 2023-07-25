@@ -157,10 +157,6 @@ body {
     background-image: url(../img/mainPhotoXXLBack.png);
 }
 
-._show {
-    opacity: 1;
-}
-
 .hero-section_content > div:nth-child(2) {
     position: relative;
     z-index: 4;
@@ -180,6 +176,69 @@ body {
 .hero-section_content > div:nth-child(2) > p {
     font-size: 1rem;
     line-height: 150%;
+}
+
+.experience-section {
+    padding: 7.5rem 4.5rem 8.75rem;
+}
+
+p.experience-section_subtitle {
+    color: #8491A0;
+    font-size: 1rem;
+    line-height: 150%;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+h2.experience-section_title {
+    font-size: 55px;
+    line-height: 120%;
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+}
+
+.experience-section_items {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-between;
+}
+
+.experience-section_items_card {
+    width: 35%;
+}
+
+.experience-section_items_card > p:nth-child(1) {
+    color: #8491A0;
+    font-size: 7.5rem;
+    line-height: 120%;
+}
+
+.experience-section_items_card >p:nth-child(2) {
+    font-size: 1.5rem;
+    line-height: 150%;
+}
+
+.experience-section_items_card > p:nth-child(3) {
+    color: #8491A0;
+    font-size: 1rem;
+    line-height: 150%;
+    
+}
+
+.experience-section_items_card:nth-child(1) > p:nth-child(2) > b > span {
+    color: #3CC74E;
+}
+
+.experience-section_items_card:nth-child(2) > p:nth-child(2) > b > span {
+    color: #609BFF;
+}
+
+.experience-section_items_card:nth-child(3) > p:nth-child(2) > b > span {
+    color: #E95D90;
+}
+
+._show {
+    opacity: 1;
 }
 
 @media screen and (max-width: 1440px) {
