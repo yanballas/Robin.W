@@ -42,12 +42,32 @@ window.addEventListener('DOMContentLoaded', () => {
                     elem.innerHTML = elemTextDefault;
                 }
                 elem.classList.remove('_hidden')
-            }, 2000)
+            }, 2500)
         }, 6000)
+    }
+
+    function showMoreAboutMe () {
+        const leftSideInSection = document.querySelector('.philosophy-section_left');
+            titleInLeft = document.querySelector('.philosophy-section_left_title');
+            textInLeft = document.querySelector('.philosophy-section_left_text');
+            btnMoreAboutMe = document.querySelector('.philosophy-section_left_btn');
+            textInBtn = document.querySelector('.philosophy-section_left_btn_text')
+            frontAboutMe = document.querySelector('.philosophy-section_right_front');
+            backAboutMe = document.querySelector('.philosophy-section_right_back');
+        btnMoreAboutMe.addEventListener('click', () => {
+            leftSideInSection.classList.toggle('philosophy-section_left-active')
+                titleInLeft.classList.toggle('philosophy-section_left_title-active');
+                    textInLeft.classList.toggle('philosophy-section_left_text-active');
+                        btnMoreAboutMe.classList.toggle('philosophy-section_left_btn-active');
+                            textInBtn.classList.toggle('philosophy-section_left_btn_text-active');
+                                frontAboutMe.classList.toggle('_show');
+                                    backAboutMe.classList.toggle('_show');
+        })
     }
     
     fixedMenu();
     slider(headerSlider);
     changeText(experienceTextElem, 'This allowed me to gain valuable experience');
+    showMoreAboutMe();
 
 })

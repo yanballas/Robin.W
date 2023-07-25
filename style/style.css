@@ -35,7 +35,11 @@ body {
     color: #fff;
 }
 
-@keyframes pulse {
+button {
+    font-family: 'Sen Regular';
+}
+
+@keyframes pulseOne {
     0% {
         box-shadow: none;
     }
@@ -44,6 +48,22 @@ body {
         box-shadow: 0px 25px 55px 0px #5221E6;
         -moz-box-shadow: 0px 25px 55px 0px #5221E6;
         -webkit-box-shadow: 0px 25px 55px 0px #5221E6;
+    }
+
+    100% {
+        box-shadow: none;
+    }
+}
+
+@keyframes pulseTwo {
+    0% {
+        box-shadow: none;
+    }
+
+    50% {
+        -webkit-box-shadow: 1px 1px 6px 6px rgba(183,  188,  193, 0.5);
+        -moz-box-shadow: 1px 1px 6px 6px rgba(183,  188,  193, 0.5);
+        box-shadow: 1px 1px 6px 6px rgba(183,  188,  193, 0.5);
     }
 
     100% {
@@ -65,9 +85,9 @@ body {
     top: 0;
     right: 0;
     z-index: 2;
-    -webkit-animation: pulse 4.5s ease infinite;
-    -moz-animation: pulse 4.5s ease infinite;
-    animation: pulse 4.5s ease infinite;
+    -webkit-animation: pulseOne 4.5s ease infinite;
+    -moz-animation: pulseOne 4.5s ease infinite;
+    animation: pulseOne 4.5s ease infinite;
 }
 
 .hero-section-nav {
@@ -129,9 +149,9 @@ body {
     left: 0;
     top: 5.5rem;
     z-index: 3;
-    -webkit-animation: pulse 4.5s ease infinite;
-    -moz-animation: pulse 4.5s ease infinite;;
-    animation: pulse 4.5s ease infinite;
+    -webkit-animation: pulseOne 4.5s ease infinite;
+    -moz-animation: pulseOne 4.5s ease infinite;;
+    animation: pulseOne 4.5s ease infinite;
 }
 
 .hero-section_content_slider_slide {
@@ -196,9 +216,9 @@ h2.experience-section_title {
     line-height: 120%;
     margin-bottom: 2.5rem;
     font-weight: 700;
-    -webkit-transition: all 2.5s ease;
-    -moz-transition: all 2.5s ease;
-    transition: all 2.5s ease;
+    -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+    transition: all 2s ease;
 }
 
 .experience-section_items {
@@ -239,6 +259,122 @@ h2.experience-section_title {
 
 .experience-section_items_card:nth-child(3) > p:nth-child(2) > b > span {
     color: #E95D90;
+}
+
+.philosophy-section {
+    background-color: #FFF3E4;
+    display: flex;
+}
+
+.philosophy-section_left {
+    background-color: #FFF3E4;
+    box-sizing: border-box;
+    width: 50%;
+    padding: 7.5rem 4.5rem;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.philosophy-section_left-active {
+    background-color: #181823;
+}
+
+h2.philosophy-section_left_title {
+    line-height: 120%;
+    font-size: 3.5rem;
+    color: #181823;
+    margin-bottom: 1.5rem;
+}
+
+p.philosophy-section_left_text {
+    line-height: 150%;
+    font-size: 1.2rem;
+    color: #5B6876;
+    margin-bottom: 8rem;
+}
+
+h2.philosophy-section_left_title-active,
+p.philosophy-section_left_text-active {
+    color: #fff;
+}
+
+button.philosophy-section_left_btn {
+    padding: 1rem;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #8491A0;
+    -webkit-animation: pulseTwo 4.5s ease infinite;
+    -moz-animation: pulseTwo 4.5s ease infinite;
+    animation: pulseTwo 4.5s ease infinite;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+p.philosophy-section_left_btn_text {
+    color: #181823;
+    font-size: 1rem;
+    line-height: 150%;
+}
+
+button.philosophy-section_left_btn:hover {
+    background-color: #181823;
+    -webkit-animation: pulseOne 4.5s ease infinite;
+    -moz-animation: pulseOne 4.5s ease infinite;
+    animation: pulseOne 4.5s ease infinite;
+}
+
+button.philosophy-section_left_btn:hover > p.philosophy-section_left_btn_text {
+    color: #fff;
+}
+
+button.philosophy-section_left_btn-active {
+    background-color: #181823;
+    -webkit-animation: pulseOne 4.5s ease infinite;
+    -moz-animation: pulseOne 4.5s ease infinite;
+    animation: pulseOne 4.5s ease infinite;
+}
+
+p.philosophy-section_left_btn_text-active {
+    color: #fff;
+}
+
+.philosophy-section_right {
+    background-color: #FFF3E4;
+    box-sizing: border-box;
+    width: 50%;
+    padding: 2rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+}
+
+.philosophy-section_right_front > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../img/PhilosophyValues.png);
+}
+
+.philosophy-section_right_back > p {
+    line-height: 150%;
+    font-size: 2rem;
+    color: #5B6876;
+}
+
+.philosophy-section_right_front,
+.philosophy-section_right_back {
+    opacity: 0;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    transition: all 1s ease;
 }
 
 h2._hidden {
