@@ -19,6 +19,8 @@ body {
     max-width: 1440px;
     margin: 0 auto;
     overflow: hidden;
+    user-select: none;
+    background-color: #000;
 }
 
 .wrapper-content {
@@ -74,7 +76,6 @@ button {
 .hero-section {
     position: relative;
     overflow: visible;
-    user-select: none;
 }
 
 .hero-section_decorate {
@@ -177,10 +178,14 @@ button {
     background-image: url(../img/mainPhotoXXLBack.png);
 }
 
-.hero-section_content > div:nth-child(2) {
+.hero-section_content_text {
     position: relative;
     z-index: 4;
     width: 54%;
+    opacity: 0;
+    -webkit-transition: all 1.5s ease;
+    -moz-transition: all 1.5s ease;
+    transition: all 1.5s ease;
 }
 
 .hero-section_content > div:nth-child(2) > h1 {
@@ -262,7 +267,6 @@ h2.experience-section_title {
 }
 
 .philosophy-section {
-    background-color: #FFF3E4;
     display: flex;
 }
 
@@ -341,7 +345,6 @@ p.philosophy-section_left_btn_text-active {
 }
 
 .philosophy-section_right {
-    background-color: #FFF3E4;
     box-sizing: border-box;
     width: 50%;
     padding: 2rem;
@@ -351,7 +354,11 @@ p.philosophy-section_left_btn_text-active {
 
 }
 
-.philosophy-section_right_front > div {
+.philosophy-section_right-active {
+    background-color: #FFF3E4;
+}
+
+.philosophy-section_right_front {
     position: absolute;
     top: 0;
     left: 0;
@@ -377,6 +384,76 @@ p.philosophy-section_left_btn_text-active {
     transition: all 1s ease;
 }
 
+.skills-section {
+    padding: 7.5rem 4.5rem;
+}
+
+.skills-section_up-section {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.skills-section_up-section_left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+h2.skills-section_up-section_left_title {
+    font-weight: 700;
+    font-size: 3.5rem;
+    line-height: 120%;
+    margin-bottom: 1.5rem;
+    -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+    transition: all 2s ease;
+}
+.skills-section_up-section_left > div:nth-child(1) > p:nth-child(2) {
+    color: #8491A0;
+    font-size: 1.2rem;
+    line-height: 150%;
+}
+
+.skills-section_up-section_left > div:nth-child(2) {
+    flex-grow: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../img/skillsPhoto.jpg);
+}
+
+.skills-section_up-section_right {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem 1.5rem;
+}
+
+.skills-section_up-section_right_card {
+    width: 48%;
+}
+
+.skills-section_up-section_right_card_inside > img {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 1.5rem;
+}
+
+.skills-section_up-section_right_card_inside > h3 {
+    font-size: 1.5rem;
+    line-height: 150%;
+    margin-bottom: 1rem;
+}
+
+.skills-section_up-section_right_card_inside > p {
+    color: #8491A0;
+    font-size: 1rem;
+    line-height: 150%;
+}
+
 h2._hidden {
     opacity: 0;
 }
@@ -389,6 +466,9 @@ h2._hidden {
 
     .hero-section-content > div:nth-child(2) > h1 {
         font-size: 3.5rem;
+    }
+    .skills-section_up-section_right_card {
+        width: 100%;
     }
 
 }

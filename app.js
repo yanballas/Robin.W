@@ -1,5 +1,9 @@
 window.addEventListener('DOMContentLoaded', () => {
 
+    setTimeout(() => {
+        document.querySelector('.hero-section_content_text').classList.add('_show')
+    }, 200)
+
     let counter = 1;
 
     const fixedMenu = () => {
@@ -30,6 +34,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     const experienceTextElem = document.querySelector('.experience-section_title');
+    const skillsTextElem = document.querySelector('.skills-section_up-section_left_title');
 
     const changeText = (elem, newtext) => {
         const elemTextDefault = elem.innerHTML;
@@ -46,12 +51,15 @@ window.addEventListener('DOMContentLoaded', () => {
         }, 6000)
     }
 
+    
+
     function showMoreAboutMe () {
         const leftSideInSection = document.querySelector('.philosophy-section_left');
             titleInLeft = document.querySelector('.philosophy-section_left_title');
             textInLeft = document.querySelector('.philosophy-section_left_text');
             btnMoreAboutMe = document.querySelector('.philosophy-section_left_btn');
             textInBtn = document.querySelector('.philosophy-section_left_btn_text')
+            rideSideInSection = document.querySelector('.philosophy-section_right');
             frontAboutMe = document.querySelector('.philosophy-section_right_front');
             backAboutMe = document.querySelector('.philosophy-section_right_back');
         btnMoreAboutMe.addEventListener('click', () => {
@@ -60,14 +68,15 @@ window.addEventListener('DOMContentLoaded', () => {
                     textInLeft.classList.toggle('philosophy-section_left_text-active');
                         btnMoreAboutMe.classList.toggle('philosophy-section_left_btn-active');
                             textInBtn.classList.toggle('philosophy-section_left_btn_text-active');
-                                frontAboutMe.classList.toggle('_show');
-                                    backAboutMe.classList.toggle('_show');
+                                rideSideInSection.classList.toggle('philosophy-section_right-active');
+                                    frontAboutMe.classList.toggle('_show');
+                                        backAboutMe.classList.toggle('_show');
         })
     }
     
     fixedMenu();
     slider(headerSlider);
     changeText(experienceTextElem, 'This allowed me to gain valuable experience');
+    changeText(skillsTextElem, 'Competencies');
     showMoreAboutMe();
-
 })
