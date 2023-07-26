@@ -1,18 +1,26 @@
 @font-face {
-    font-family: 'Sen Regular';
+    font-family: 'Sen-Regular';
     font-weight: 400;
     src: url(../assets/font/Sen-Regular.ttf);
 }
 
 @font-face {
-    font-family: 'Sen Bold';
+    font-family: 'Sen-Bold';
     font-weight: 700;
     src: url(../assets/font/Sen-Bold.ttf);
+}
+
+:root {
+    --blue: #5221E6;
+    --gray: #8491A0;
+    --black-dlc: #181823;
 }
 
 body {
     background-color: #000;
     font-size: 16px;
+    font-family: 'Sen-Regular', Arial, sans-serif;
+    color: #fff;
 }
 
 ._container {
@@ -21,20 +29,6 @@ body {
     overflow: hidden;
     user-select: none;
     background-color: #000;
-}
-
-.wrapper-content {
-    font-family: 'Sen Regular';
-}
-
-.wrapper-content p,
-.wrapper-content li,
-.wrapper-content h1,
-.wrapper-content h2,
-.wrapper-content h3,
-.wrapper-content h4,
-.wrapper-content h5 {
-    color: #fff;
 }
 
 button {
@@ -47,9 +41,9 @@ button {
     }
 
     50% {
-        box-shadow: 0px 25px 55px 0px #5221E6;
-        -moz-box-shadow: 0px 25px 55px 0px #5221E6;
-        -webkit-box-shadow: 0px 25px 55px 0px #5221E6;
+        box-shadow: 0px 25px 55px 0px color var(--blue);
+        -moz-box-shadow: 0px 25px 55px 0px var(--blue);
+        -webkit-box-shadow: 0px 25px 55px 0px var(--blue);
     }
 
     100% {
@@ -73,13 +67,22 @@ button {
     }
 }
 
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-100% - 24px));
+    }
+}
+
 .hero-section {
     position: relative;
     overflow: visible;
 }
 
 .hero-section_decorate {
-    background-color: #181823;
+    background-color: var(--black-dlc);
     height: 100%;
     width: 65%;
     position: absolute;
@@ -107,7 +110,7 @@ button {
 
 .hero-section-nav-fixed {
     background-color: #000;
-    box-shadow: 0px 5px 15px 0px #5221E6;
+    box-shadow: 0px 5px 15px 0px var(--blue);
 }
 
 .nav_logo {
@@ -129,7 +132,7 @@ button {
 }
 
 .nav_menu > ul > li:hover {
-    background-color: #5221E6;
+    background-color: var(--blue);
     font-weight: 700;
 }
 
@@ -208,7 +211,7 @@ button {
 }
 
 p.experience-section_subtitle {
-    color: #8491A0;
+    color: var(--gray);
     font-size: 1rem;
     line-height: 150%;
     text-transform: uppercase;
@@ -237,7 +240,7 @@ h2.experience-section_title {
 }
 
 .experience-section_items_card > p:nth-child(1) {
-    color: #8491A0;
+    color: var(--gray);
     font-size: 7.5rem;
     line-height: 120%;
 }
@@ -248,7 +251,7 @@ h2.experience-section_title {
 }
 
 .experience-section_items_card > p:nth-child(3) {
-    color: #8491A0;
+    color: var(--gray);
     font-size: 1rem;
     line-height: 150%;
     
@@ -281,13 +284,13 @@ h2.experience-section_title {
 }
 
 .philosophy-section_left-active {
-    background-color: #181823;
+    background-color: var(--black-dlc);
 }
 
 h2.philosophy-section_left_title {
     line-height: 120%;
     font-size: 3.5rem;
-    color: #181823;
+    color: var(--black-dlc);
     margin-bottom: 1.5rem;
 }
 
@@ -307,7 +310,7 @@ button.philosophy-section_left_btn {
     padding: 1rem;
     cursor: pointer;
     background-color: transparent;
-    border: 1px solid #8491A0;
+    border: 1px solid var(--gray);
     -webkit-animation: pulseTwo 4.5s ease infinite;
     -moz-animation: pulseTwo 4.5s ease infinite;
     animation: pulseTwo 4.5s ease infinite;
@@ -317,13 +320,13 @@ button.philosophy-section_left_btn {
 }
 
 p.philosophy-section_left_btn_text {
-    color: #181823;
+    color: var(--black-dlc);
     font-size: 1rem;
     line-height: 150%;
 }
 
 button.philosophy-section_left_btn:hover {
-    background-color: #181823;
+    background-color: var(--black-dlc);
     -webkit-animation: pulseOne 4.5s ease infinite;
     -moz-animation: pulseOne 4.5s ease infinite;
     animation: pulseOne 4.5s ease infinite;
@@ -334,7 +337,7 @@ button.philosophy-section_left_btn:hover > p.philosophy-section_left_btn_text {
 }
 
 button.philosophy-section_left_btn-active {
-    background-color: #181823;
+    background-color: var(--black-dlc);
     -webkit-animation: pulseOne 4.5s ease infinite;
     -moz-animation: pulseOne 4.5s ease infinite;
     animation: pulseOne 4.5s ease infinite;
@@ -410,7 +413,7 @@ h2.skills-section_up-section_left_title {
     transition: all 2s ease;
 }
 .skills-section_up-section_left > div:nth-child(1) > p:nth-child(2) {
-    color: #8491A0;
+    color: var(--gray);
     font-size: 1.2rem;
     line-height: 150%;
 }
@@ -449,9 +452,42 @@ h2.skills-section_up-section_left_title {
 }
 
 .skills-section_up-section_right_card_inside > p {
-    color: #8491A0;
+    color: var(--gray);
     font-size: 1rem;
     line-height: 150%;
+}
+
+.skills-section_up-section_down-section {
+    padding: 1.5rem 0;
+}
+
+.skills-section_up-section_down-section_items-wrap {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    gap: 24px;
+}
+
+.skills-section_up-section_down-section_items-wrap_items {
+    display: flex;
+    flex-shrink: 0;
+    gap: 24px;
+    justify-content: space-around;
+    min-width: 100%;
+}
+
+.skills-section_up-section_down-section_items-wrap_marquee {
+    animation: marquee 30s linear infinite;
+}
+
+.skills-section_up-section_down-section_items-wrap_item {
+    border: 2px solid var(--blue);
+    background: #000;
+    width: 340px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 h2._hidden {
