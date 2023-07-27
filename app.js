@@ -34,7 +34,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     const experienceTextElem = document.querySelector('.experience-section__title');
-    const skillsTextElem = document.querySelector('.skills-section_up-section_left_title');
+    const skillsTextElem = document.querySelector('.skills-section-left-side__title');
 
     const changeText = (elem, newtext) => {
         const elemTextDefault = elem.innerHTML;
@@ -54,21 +54,21 @@ window.addEventListener('DOMContentLoaded', () => {
     
 
     function showMoreAboutMe () {
-        const leftSideInSection = document.querySelector('.philosophy-section_left');
-            titleInLeft = document.querySelector('.philosophy-section_left_title');
-            textInLeft = document.querySelector('.philosophy-section_left_text');
-            btnMoreAboutMe = document.querySelector('.philosophy-section_left_btn');
-            textInBtn = document.querySelector('.philosophy-section_left_btn_text')
-            rideSideInSection = document.querySelector('.philosophy-section_right');
-            frontAboutMe = document.querySelector('.philosophy-section_right_front');
-            backAboutMe = document.querySelector('.philosophy-section_right_back');
+        const leftSideInSection = document.querySelector('.philosophy-section-left-side');
+            titleInLeft = document.querySelector('.philosophy-section-left-side__title');
+            textInLeft = document.querySelector('.philosophy-section-left-side__text');
+            btnMoreAboutMe = document.querySelector('.philosophy-section-left-side__btn');
+            textInBtn = document.querySelector('.philosophy-section-left-side__btn-text')
+            rideSideInSection = document.querySelector('.philosophy-section-right-side');
+            frontAboutMe = document.querySelector('.philosophy-section-right-side__front');
+            backAboutMe = document.querySelector('.philosophy-section-right-side__back');
         btnMoreAboutMe.addEventListener('click', () => {
-            leftSideInSection.classList.toggle('philosophy-section_left-active')
-                titleInLeft.classList.toggle('philosophy-section_left_title-active');
-                    textInLeft.classList.toggle('philosophy-section_left_text-active');
-                        btnMoreAboutMe.classList.toggle('philosophy-section_left_btn-active');
-                            textInBtn.classList.toggle('philosophy-section_left_btn_text-active');
-                                rideSideInSection.classList.toggle('philosophy-section_right-active');
+            leftSideInSection.classList.toggle('philosophy-section-left-side-active')
+                titleInLeft.classList.toggle('philosophy-section-left-side__title-active');
+                    textInLeft.classList.toggle('philosophy-section-left-side__text-active');
+                        btnMoreAboutMe.classList.toggle('philosophy-section-left-side__btn-active');
+                            textInBtn.classList.toggle('philosophy-section-left-side__btn-text-active');
+                                rideSideInSection.classList.toggle('philosophy-section-right-side-active');
                                     frontAboutMe.classList.toggle('_show');
                                         backAboutMe.classList.toggle('_show');
         })
