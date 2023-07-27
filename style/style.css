@@ -220,7 +220,7 @@ p.experience-section__subtitle {
 
 h2.experience-section__title {
     opacity: 1;
-    font-size: 55px;
+    font-size: 3.5rem;
     line-height: 120%;
     margin-bottom: 2.5rem;
     font-weight: 700;
@@ -388,7 +388,7 @@ p.philosophy-section-left-side__btn-text-active {
 }
 
 .skills-section {
-    padding: 7.5rem 4.5rem;
+    padding: 7.5rem 4.5rem 0;
 }
 
 .skills-section__up-section {
@@ -488,6 +488,31 @@ h2.skills-section-left-side__title {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.project-section {
+    padding: 7.5rem 4.5rem;
+}
+
+.project-section__up-section {
+    display: flex;
+}
+
+.project-section-left-side,
+.project-section-right-side {
+    width: 50%;
+}
+
+.project-section-left-side > p {
+    color: var(--gray);
+    font-size: 1rem;
+    line-height: 150%;
+    margin-bottom: 0.5rem;
+}
+
+.project-section-left-side > h3 {
+    font-size: 3.5rem;
+    line-height: 120%;
 }
 
 h2._hidden {
