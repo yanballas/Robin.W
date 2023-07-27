@@ -94,7 +94,7 @@ button {
     animation: pulseOne 4.5s ease infinite;
 }
 
-.hero-section-nav {
+.nav {
     box-sizing: border-box;
     padding: 0 4.5rem;
     display: flex;
@@ -108,20 +108,20 @@ button {
     transition: all 0.5s ease;
 }
 
-.hero-section-nav-fixed {
+.nav_fixed {
     background-color: #000;
     box-shadow: 0px 5px 15px 0px var(--blue);
 }
 
-.nav_logo {
+.nav__logo {
     width: 78px;
 }
 
-.nav_menu > ul {
+.nav__menu > ul {
     display: flex;
 }
 
-.nav_menu > ul > li {
+.nav__menu > ul > li {
     padding: 2rem 1.5rem;
     cursor: pointer;
     font-size: 1rem;
@@ -136,7 +136,7 @@ button {
     font-weight: 700;
 }
 
-.hero-section_content {
+.hero-section__content {
     box-sizing: border-box;
     padding: 10.5rem 2.5% 5% 0;
     position: relative;
@@ -146,7 +146,7 @@ button {
     height: 814px;
 }
 
-.hero-section_content_slider {
+.hero-section__slider {
     width: 52%;
     height: 79%;
     position: absolute;
@@ -158,7 +158,7 @@ button {
     animation: pulseOne 4.5s ease infinite;
 }
 
-.hero-section_content_slider_slide {
+.hero-section__slide {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -173,15 +173,15 @@ button {
     opacity: 0;
 }
 
-.hero-section_content_slider_slide_1 {
+.hero-section__slide_1 {
     background-image: url(../img/mainPhotoXXLFront.png);
 }
 
-.hero-section_content_slider_slide_2 {
+.hero-section__slide_2 {
     background-image: url(../img/mainPhotoXXLBack.png);
 }
 
-.hero-section_content_text {
+.hero-section__text {
     position: relative;
     z-index: 4;
     width: 54%;
@@ -191,17 +191,17 @@ button {
     transition: all 1.5s ease;
 }
 
-.hero-section_content > div:nth-child(2) > h1 {
+.hero-section__content > div:nth-child(2) > h1 {
     font-size: 4.8rem;
     line-height: 120%;
     margin-bottom: 2rem;
 }
 
-.hero-section_content > div:nth-child(2) > h1 > b > span {
+.hero-section__content > div:nth-child(2) > h1 > b > span {
     color: rgba(255, 255, 255, 0.50);
 }
 
-.hero-section_content > div:nth-child(2) > p {
+.hero-section__content > div:nth-child(2) > p {
     font-size: 1rem;
     line-height: 150%;
 }
@@ -210,7 +210,7 @@ button {
     padding: 7.5rem 4.5rem 8.75rem;
 }
 
-p.experience-section_subtitle {
+p.experience-section__subtitle {
     color: var(--gray);
     font-size: 1rem;
     line-height: 150%;
@@ -218,7 +218,7 @@ p.experience-section_subtitle {
     margin-bottom: 0.5rem;
 }
 
-h2.experience-section_title {
+h2.experience-section__title {
     opacity: 1;
     font-size: 55px;
     line-height: 120%;
@@ -229,43 +229,43 @@ h2.experience-section_title {
     transition: all 2s ease;
 }
 
-.experience-section_items {
+.experience-section__items {
     display: flex;
     gap: 1.5rem;
     justify-content: space-between;
 }
 
-.experience-section_items_card {
+.experience-section__card {
     width: 35%;
 }
 
-.experience-section_items_card > p:nth-child(1) {
+.experience-section__card > p:nth-child(1) {
     color: var(--gray);
     font-size: 7.5rem;
     line-height: 120%;
 }
 
-.experience-section_items_card >p:nth-child(2) {
+.experience-section__card >p:nth-child(2) {
     font-size: 1.5rem;
     line-height: 150%;
 }
 
-.experience-section_items_card > p:nth-child(3) {
+.experience-section__card > p:nth-child(3) {
     color: var(--gray);
     font-size: 1rem;
     line-height: 150%;
     
 }
 
-.experience-section_items_card:nth-child(1) > p:nth-child(2) > b > span {
+.experience-section__card:nth-child(1) > p:nth-child(2) > b > span {
     color: #3CC74E;
 }
 
-.experience-section_items_card:nth-child(2) > p:nth-child(2) > b > span {
+.experience-section__card:nth-child(2) > p:nth-child(2) > b > span {
     color: #609BFF;
 }
 
-.experience-section_items_card:nth-child(3) > p:nth-child(2) > b > span {
+.experience-section__card:nth-child(3) > p:nth-child(2) > b > span {
     color: #E95D90;
 }
 
@@ -273,7 +273,7 @@ h2.experience-section_title {
     display: flex;
 }
 
-.philosophy-section_left {
+.philosophy-section-left-side {
     background-color: #FFF3E4;
     box-sizing: border-box;
     width: 50%;
@@ -283,7 +283,7 @@ h2.experience-section_title {
     transition: all 1s ease;
 }
 
-.philosophy-section_left-active {
+.philosophy-section-left-side-active {
     background-color: var(--black-dlc);
 }
 
@@ -347,7 +347,7 @@ p.philosophy-section_left_btn_text-active {
     color: #fff;
 }
 
-.philosophy-section_right {
+.philosophy-section-right-side {
     box-sizing: border-box;
     width: 50%;
     padding: 2rem;
@@ -357,7 +357,7 @@ p.philosophy-section_left_btn_text-active {
 
 }
 
-.philosophy-section_right-active {
+.philosophy-section-right-side-active {
     background-color: #FFF3E4;
 }
 

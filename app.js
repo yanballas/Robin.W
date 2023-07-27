@@ -1,24 +1,24 @@
 window.addEventListener('DOMContentLoaded', () => {
 
     setTimeout(() => {
-        document.querySelector('.hero-section_content_text').classList.add('_show')
+        document.querySelector('.hero-section__text').classList.add('_show')
     }, 200)
 
     let counter = 1;
 
     const fixedMenu = () => {
-        const nav = document.querySelector('.hero-section-nav')
+        const nav = document.querySelector('.nav')
 
         window.addEventListener('scroll',  () => {
             if(scrollY > 88) {
-                nav.classList.add('hero-section-nav-fixed')
+                nav.classList.add('nav_fixed')
             } else {
-                nav.classList.remove('hero-section-nav-fixed')
+                nav.classList.remove('nav_fixed')
             }
         })
     }
 
-    const headerSlider = document.querySelectorAll('.hero-section_content_slider_slide');
+    const headerSlider = document.querySelectorAll('.hero-section__slide');
 
     const slider = (array) => {
         setInterval(() => {
@@ -33,7 +33,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }, 4000)
     }
 
-    const experienceTextElem = document.querySelector('.experience-section_title');
+    const experienceTextElem = document.querySelector('.experience-section__title');
     const skillsTextElem = document.querySelector('.skills-section_up-section_left_title');
 
     const changeText = (elem, newtext) => {
