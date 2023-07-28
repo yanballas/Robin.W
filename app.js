@@ -18,6 +18,37 @@ window.addEventListener('DOMContentLoaded', () => {
         })
     }
 
+    const navMove = () => {
+        const links = document.querySelectorAll('.nav__link');
+        const sections = document.querySelectorAll('section');
+        const topOffSet = document.querySelector('.nav').offsetHeight;
+        const homeLink = document.querySelector('.nav__logo');
+        links.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                let href = link.getAttribute('href').substring(1);
+                let target;
+                sections.forEach(section => {
+                    if (section.dataset.tab === href) {
+                        target = section
+                    }
+                })
+                let targetPosition = target.getBoundingClientRect().top;
+                let offsetPosition = targetPosition - topOffSet;
+                window.scrollBy({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+            })
+        })
+        homeLink.addEventListener('click', () => {
+            window.scroll({
+                top: 0,
+                behavior: "smooth"
+            })
+        })
+    }
+
     const headerSlider = document.querySelectorAll('.hero-section__slide');
 
     const slider = (array) => {
@@ -75,6 +106,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     
     fixedMenu();
+    navMove();
     slider(headerSlider);
     changeText(experienceTextElem, 'This allowed me to gain valuable experience');
     changeText(skillsTextElem, 'Competencies');
