@@ -89,7 +89,6 @@ window.addEventListener('DOMContentLoaded', () => {
             titleInLeft = document.querySelector('.philosophy-section-left-side__title');
             textInLeft = document.querySelector('.philosophy-section-left-side__text');
             btnMoreAboutMe = document.querySelector('.philosophy-section-left-side__btn');
-            textInBtn = document.querySelector('.philosophy-section-left-side__btn-text')
             rideSideInSection = document.querySelector('.philosophy-section-right-side');
             frontAboutMe = document.querySelector('.philosophy-section-right-side__front');
             backAboutMe = document.querySelector('.philosophy-section-right-side__back');
@@ -98,10 +97,9 @@ window.addEventListener('DOMContentLoaded', () => {
                 titleInLeft.classList.toggle('philosophy-section-left-side__title-active');
                     textInLeft.classList.toggle('philosophy-section-left-side__text-active');
                         btnMoreAboutMe.classList.toggle('philosophy-section-left-side__btn-active');
-                            textInBtn.classList.toggle('philosophy-section-left-side__btn-text-active');
-                                rideSideInSection.classList.toggle('philosophy-section-right-side-active');
-                                    frontAboutMe.classList.toggle('_show');
-                                        backAboutMe.classList.toggle('_show');
+                            rideSideInSection.classList.toggle('philosophy-section-right-side-active');
+                                frontAboutMe.classList.toggle('_show');
+                                    backAboutMe.classList.toggle('_show');
         })
     }
     
