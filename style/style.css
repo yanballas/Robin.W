@@ -560,10 +560,10 @@ h2._hidden {
 
 @media screen and (max-width: 1440px) {
 
-    .hero-section-content > div:nth-child(2) > h1 {
+    .hero-section__content > div:nth-child(2) > h1 {
         font-size: 3.5rem;
     }
-    .skills-section_up-section_right_card {
+    .skills-section-right-side__card {
         width: 100%;
     }
 
