@@ -225,7 +225,7 @@ a.nav__link:hover {
 }
 
 .experience-section {
-    padding: 7.5rem 4.5rem;
+    padding: 3.5rem;
 }
 
 p.experience-section__subtitle {
@@ -397,7 +397,7 @@ button.philosophy-section-left-side__btn-active {
 }
 
 .skills-section {
-    padding: 7.5rem 4.5rem;
+    padding: 3.5rem;
 }
 
 .skills-section__up-section {
@@ -497,7 +497,7 @@ h2.skills-section-left-side__title {
 }
 
 .project-section {
-    padding: 0 4.5rem 7.5rem;
+    padding: 3.5rem;
 }
 
 .project-section__up-section {
