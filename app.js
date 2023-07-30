@@ -66,6 +66,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const experienceTextElem = document.querySelector('.experience-section__title');
     const skillsTextElem = document.querySelector('.skills-section-left-side__title');
+    const projectTextElem = document.querySelector('.project-section-up-section__title');
 
     const changeText = (elem, newtext) => {
         const elemTextDefault = elem.innerHTML;
@@ -82,7 +83,6 @@ window.addEventListener('DOMContentLoaded', () => {
         }, 6000)
     }
 
-    
 
     function showMoreAboutMe () {
         const leftSideInSection = document.querySelector('.philosophy-section-left-side');
@@ -108,5 +108,6 @@ window.addEventListener('DOMContentLoaded', () => {
     slider(headerSlider);
     changeText(experienceTextElem, 'This allowed me to gain valuable experience');
     changeText(skillsTextElem, 'Competencies');
+    changeText(projectTextElem, 'For the past 8 years')
     showMoreAboutMe();
 })
