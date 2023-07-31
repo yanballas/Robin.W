@@ -102,6 +102,28 @@ window.addEventListener('DOMContentLoaded', () => {
                                     backAboutMe.classList.toggle('_show');
         })
     }
+
+    function tab () {
+        const buttons = document.querySelectorAll('.photo-section__tab-btn');
+        const tabSection = document.querySelectorAll('.gallery__content');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                buttons.forEach(buttonActive => {
+                    if(buttonActive.classList.contains('photo-section__tab-btn-active')) {
+                        buttonActive.classList.remove('photo-section__tab-btn-active');
+                    }
+                })
+                button.classList.add('photo-section__tab-btn-active');
+                tabSection.forEach(section => {
+                    section.classList.remove('_show');
+                    if (button.dataset.tab === section.dataset.tab) {
+                        section.classList.add('_show')
+                    }
+                });
+            })
+        })
+    }
     
     fixedMenu();
     navMove();
@@ -110,4 +132,5 @@ window.addEventListener('DOMContentLoaded', () => {
     changeText(skillsTextElem, 'Competencies');
     changeText(projectTextElem, 'For the past 8 years')
     showMoreAboutMe();
+    tab();
 })
