@@ -24,14 +24,6 @@ body {
     color: #fff;
 }
 
-._container {
-    max-width: 1440px;
-    margin: 0 auto;
-    overflow: hidden;
-    user-select: none;
-    background-color: #000;
-}
-
 button {
     font-family: 'Sen Regular';
 }
@@ -79,7 +71,6 @@ button {
 
 .hero-section {
     position: relative;
-    overflow: visible;
 }
 
 .hero-section_decorate {
@@ -87,7 +78,7 @@ button {
     height: 100%;
     width: 65%;
     position: absolute;
-    top: 0;
+    top: 88px;
     right: 0;
     z-index: 2;
     -webkit-animation: pulseOne 4.5s ease infinite;
@@ -491,7 +482,6 @@ h2.skills-section-left-side__title {
 
 .photo-section {
     background-color: var(--peach);
-    padding: 7.5rem 4.5rem;
 }
 
 .photo-section > h2 {
@@ -534,6 +524,10 @@ h2.skills-section-left-side__title {
     background-color: var(--blue);
 }
 
+.gallery {
+    position: relative;
+}
+
 .gallery__content {
     display: flex;
     gap: 1rem;
@@ -541,6 +535,16 @@ h2.skills-section-left-side__title {
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     transition: all 1s ease;
+}
+
+.gallery > div:nth-child(2),
+.gallery > div:nth-child(3),
+.gallery > div:nth-child(4) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .gallery__item {
@@ -603,6 +607,13 @@ h2.skills-section-left-side__title {
     line-height: 150%;
 }
 
+._container {
+    max-width: 1440px;
+    margin: 0 auto;
+    user-select: none;
+    background-color: #000;
+}
+
 h2._hidden {
     opacity: 0;
 }
@@ -613,6 +624,7 @@ h2._hidden {
 
 ._section {
     padding: 3.5rem;
+    overflow: hidden;
 }
 
 @media screen and (max-width: 1440px) {
