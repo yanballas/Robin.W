@@ -607,6 +607,127 @@ h2.skills-section-left-side__title {
     line-height: 150%;
 }
 
+.contact-section {
+    position: relative;
+    background: var(--peach);
+}
+
+.contact-section__front {
+    display: flex;
+    gap: 2rem;
+    position: relative;
+    z-index: 9;
+}
+
+.contact-section__back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:var(--black-dlc);
+    opacity: 0;
+    z-index: 8;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.contact-section__back > h4 {
+    font-size: 6rem;
+    text-align: center;
+    line-height: 150%;
+}
+
+.contact-section__back-active {
+    opacity: 0.5;
+    z-index: 9;
+}
+
+.contact-section-left-side,
+.contact-section-right-side {
+    width: 50%;
+}
+
+.contact-section-left-side {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-section-left-side > h2 {
+    color: var(--black-dlc);
+    font-weight: 700;
+    font-size: 3.5rem;
+    line-height: 120%;
+}
+
+.contact-section-left-side > p {
+    color: #5B6876;
+    font-size: 1rem;
+    line-height: 150%;
+}
+
+.contact-section-left-side > div {
+    flex-grow: 1;
+    background-position-y: 55%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../img/mailContact.jpg);
+}
+
+.contact-section-right-side {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-section-right-side > div > p {
+    font-size: 1rem;
+    line-height: 120%;
+    margin-bottom: 0.5rem;
+    color: var(--black-dlc);
+}
+
+.contact-section-right-side > div > label > input {
+    background: var(--black-dlc);
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    padding: 0.5rem;
+    margin: 0;
+    width: 70%;
+    box-sizing: border-box;
+}
+
+.contact-section-right-side > div:nth-child(3) > label > input {
+    padding: 2rem 1rem;
+}
+
+.contact-section-right-side > div:nth-child(4) > button {
+    padding: 1rem;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid var(--gray);
+    -webkit-animation: pulseTwo 4.5s ease infinite;
+    -moz-animation: pulseTwo 4.5s ease infinite;
+    animation: pulseTwo 4.5s ease infinite;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    transition: all 1s ease;
+    color: var(--black-dlc);
+    font-size: 2rem;
+    line-height: 150%;
+}
+
+.contact-section-right-side > div:nth-child(4) > button:hover {
+    color: #fff;
+    background-color: var(--black-dlc);
+    -webkit-animation: pulseOne 4.5s ease infinite;
+    -moz-animation: pulseOne 4.5s ease infinite;
+    animation: pulseOne 4.5s ease infinite;
+}
+
 .footer-section {
     margin: 0 3.5rem;
     padding: 1rem 3.5rem;
@@ -617,12 +738,12 @@ h2.skills-section-left-side__title {
 }
 
 .footer-section > div:nth-child(1) > img {
-    width: 48px;
+    width: 28px;
 }
 
 .footer-section > div:nth-child(2) {
     display: flex;
-    justify-content: flex-end;
+    align-items: center;
     gap: 2rem;
 }
 
@@ -635,8 +756,26 @@ h2.skills-section-left-side__title {
     position: relative;
 }
 
-.footer-section > div:nth-child(2) > a::before,
-.footer-section > div:nth-child(2) > a::after {
+.footer-section > div:nth-child(2) > a:nth-child(2) {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../img/gitIcon.svg);
+    width: 18px;
+    height: 18px;
+}
+
+.footer-section > div:nth-child(2) > a:nth-child(3) {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../img/telegramIcon.svg);
+    width: 18px;
+    height: 18px;
+}
+
+.footer-section > div:nth-child(2) > a:nth-child(2)::before,
+.footer-section > div:nth-child(2) > a:nth-child(2)::after {
     content: '';
     display: inline-block;
     position: absolute;
@@ -645,10 +784,10 @@ h2.skills-section-left-side__title {
     top: 0;
 }
 
-.footer-section > div:nth-child(2) > a::before {
+.footer-section > div:nth-child(2) > a:nth-child(2)::before {
     left: -1rem;
 }
-.footer-section > div:nth-child(2) > a::after {
+.footer-section > div:nth-child(2) > a:nth-child(2)::after {
     right: -1rem;
 }
 

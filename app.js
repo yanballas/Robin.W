@@ -124,6 +124,19 @@ window.addEventListener('DOMContentLoaded', () => {
             })
         })
     }
+
+    function submit () {
+        const button = document.querySelector('.contact-section-right-side_btn');
+        const modalSection = document.querySelector('.contact-section__back');
+
+        button.addEventListener('click', (el) => {
+            el.preventDefault;
+            modalSection.classList.add('contact-section__back-active');
+            setTimeout(() => {
+                modalSection.classList.remove('contact-section__back-active')
+            }, 3000)
+        })
+    }
     
     fixedMenu();
     navMove();
@@ -133,4 +146,5 @@ window.addEventListener('DOMContentLoaded', () => {
     changeText(projectTextElem, 'For the past 8 years')
     showMoreAboutMe();
     tab();
+    submit();
 })
