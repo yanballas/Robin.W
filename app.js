@@ -128,12 +128,15 @@ window.addEventListener('DOMContentLoaded', () => {
     function submit () {
         const button = document.querySelector('.contact-section-right-side_btn');
         const modalSection = document.querySelector('.contact-section__back');
+        const staticSection = document.querySelector('.contact-section__front');
 
         button.addEventListener('click', (el) => {
             el.preventDefault;
             modalSection.classList.add('contact-section__back-active');
+            staticSection.classList.add('_hidden');
             setTimeout(() => {
                 modalSection.classList.remove('contact-section__back-active')
+                staticSection.classList.remove('_hidden');
             }, 3000)
         })
     }

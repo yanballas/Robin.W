@@ -122,11 +122,11 @@ button {
     width: 78px;
 }
 
-.nav__menu > div {
+.nav__menu {
     display: flex;
 }
 
-.nav__menu > div > a > p {
+.nav__menu > a > p {
     font-size: 1rem;
     line-height: 150%;
 }
@@ -201,13 +201,13 @@ a.nav__link:hover {
     transition: all 1.5s ease;
 }
 
-.hero-section__content > div:nth-child(2) > h1 {
+.hero-section__text > h1 {
     font-size: 4.8rem;
     line-height: 120%;
     margin-bottom: 2rem;
 }
 
-.hero-section__content > div:nth-child(2) > h1 > b > span {
+.hero-section__text > h1 > b > span {
     color: rgba(255, 255, 255, 0.50);
 }
 
@@ -245,33 +245,33 @@ h2.experience-section__title {
     width: 35%;
 }
 
-.experience-section__card > p:nth-child(1) {
+.experience-section__card-title {
     color: var(--gray);
     font-size: 7.5rem;
     line-height: 120%;
 }
 
-.experience-section__card >p:nth-child(2) {
+.experience-section__card-label {
     font-size: 1.5rem;
     line-height: 150%;
 }
 
-.experience-section__card > p:nth-child(3) {
+.experience-section__card-text {
     color: var(--gray);
     font-size: 1rem;
     line-height: 150%;
     
 }
 
-.experience-section__card:nth-child(1) > p:nth-child(2) > b > span {
+.experience-section__card:nth-child(1) > .experience-section__card-label > b > span {
     color: #3CC74E;
 }
 
-.experience-section__card:nth-child(2) > p:nth-child(2) > b > span {
+.experience-section__card:nth-child(2) > .experience-section__card-label > b > span {
     color: #609BFF;
 }
 
-.experience-section__card:nth-child(3) > p:nth-child(2) > b > span {
+.experience-section__card:nth-child(3) > .experience-section__card-label > b > span {
     color: #E95D90;
 }
 
@@ -406,13 +406,13 @@ h2.skills-section-left-side__title {
     -moz-transition: all 2s ease;
     transition: all 2s ease;
 }
-.skills-section-left-side > div:nth-child(1) > p:nth-child(2) {
+.skills-section-left-side__first-section > p:nth-child(2) {
     color: var(--gray);
     font-size: 1rem;
     line-height: 150%;
 }
 
-.skills-section-left-side > div:nth-child(2) {
+.skills-section-left-side__second-section {
     flex-grow: 1;
     background-position: center;
     background-repeat: no-repeat;
@@ -612,36 +612,41 @@ h2.skills-section-left-side__title {
     background: var(--peach);
 }
 
-.contact-section__front {
-    display: flex;
-    gap: 2rem;
-    position: relative;
-    z-index: 9;
-}
-
 .contact-section__back {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color:var(--black-dlc);
+    background-color:var(--peach);
     opacity: 0;
-    z-index: 8;
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     transition: all 1s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .contact-section__back > h4 {
     font-size: 6rem;
     text-align: center;
     line-height: 150%;
+    color: var(--black-dlc);
 }
 
 .contact-section__back-active {
-    opacity: 0.5;
+    opacity: 1;
     z-index: 9;
+}
+
+.contact-section__front {
+    display: flex;
+    gap: 2rem;
+    position: relative;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    transition: all 1s ease;
 }
 
 .contact-section-left-side,
@@ -668,7 +673,7 @@ h2.skills-section-left-side__title {
     line-height: 150%;
 }
 
-.contact-section-left-side > div {
+.contact-section-left-side__pic {
     flex-grow: 1;
     background-position-y: 55%;
     background-repeat: no-repeat;
@@ -737,18 +742,18 @@ h2.skills-section-left-side__title {
     align-items: center;
 }
 
-.footer-section > div:nth-child(1) > img {
+.footer-section-left-side > img {
     width: 28px;
 }
 
-.footer-section > div:nth-child(2) {
+.footer-section-right-side {
     display: flex;
     align-items: center;
     gap: 2rem;
 }
 
-.footer-section > div:nth-child(2) > p,
-.footer-section > div:nth-child(2) > a {
+.footer-section-right-side > p,
+.footer-section-right-side > a {
     font-size: 0.5rem;
     line-height: 120%;
     text-decoration: none;
@@ -756,7 +761,7 @@ h2.skills-section-left-side__title {
     position: relative;
 }
 
-.footer-section > div:nth-child(2) > a:nth-child(2) {
+.footer-section-right-side > a:nth-child(2) {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -765,7 +770,7 @@ h2.skills-section-left-side__title {
     height: 18px;
 }
 
-.footer-section > div:nth-child(2) > a:nth-child(3) {
+.footer-section-right-side > a:nth-child(3) {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -774,8 +779,8 @@ h2.skills-section-left-side__title {
     height: 18px;
 }
 
-.footer-section > div:nth-child(2) > a:nth-child(2)::before,
-.footer-section > div:nth-child(2) > a:nth-child(2)::after {
+.footer-section-right-side > a:nth-child(2)::before,
+.footer-section-right-side > a:nth-child(2)::after {
     content: '';
     display: inline-block;
     position: absolute;
@@ -784,10 +789,10 @@ h2.skills-section-left-side__title {
     top: 0;
 }
 
-.footer-section > div:nth-child(2) > a:nth-child(2)::before {
+.footer-section-right-side > a:nth-child(2)::before {
     left: -1rem;
 }
-.footer-section > div:nth-child(2) > a:nth-child(2)::after {
+.footer-section-right-side > a:nth-child(2)::after {
     right: -1rem;
 }
 
@@ -806,6 +811,10 @@ h2._hidden {
     opacity: 1;
 }
 
+._hidden {
+    opacity: 0;
+}
+
 ._section {
     padding: 3.5rem;
     overflow: hidden;
@@ -813,7 +822,7 @@ h2._hidden {
 
 @media screen and (max-width: 1440px) {
 
-    .hero-section__content > div:nth-child(2) > h1 {
+    .hero-section__text > h1 {
         font-size: 3.5rem;
     }
     .skills-section-right-side__card {
