@@ -140,6 +140,10 @@ window.addEventListener('DOMContentLoaded', () => {
             }, 3000)
         })
     }
+
+    if (window.innerWidth < 1024) {
+        document.querySelector('.nav').before(document.querySelector('.nav__menu'));
+    }
     
     fixedMenu();
     navMove();

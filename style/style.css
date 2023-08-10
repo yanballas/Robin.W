@@ -836,3 +836,58 @@ h2._hidden {
     }
 
 }
+
+@media screen and (max-width: 1024px) {
+
+    .nav {
+        padding: 1rem;
+    }
+
+    .nav__menu {
+        position: absolute;
+        z-index: 8;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--black-dlc);
+        flex-direction: column;
+        transform: translateY(-800px);
+        -webkit-transform: translateY(-800px);
+        -moz-transform: translateY(-800px);
+    }
+
+    a.nav__link {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .hero-section_decorate {
+        display: none;
+    }
+
+    .hero-section__content {
+        height: auto;
+        padding: 4rem 2rem 0 0;
+        justify-content: space-between;
+        gap: 2rem;
+        background-color: var(--black-dlc)
+    }
+    
+    .hero-section__slider {
+        position: relative;
+        left: auto;
+        top: auto;
+        width: 350px;
+        height: 650px;
+        flex-basis: 100%;
+    }
+
+    .hero-section__text {
+        width: auto;
+    }
+
+    .hero-section__text > h1 {
+        font-size: 2rem;
+    }
+
+}
