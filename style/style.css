@@ -102,14 +102,17 @@ button {
 }
 
 .nav_fixed {
-    background-color: #000;
     box-shadow: 0px 5px 15px 0px var(--blue);
 }
 
 .nav__logo {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    height: 100%;
     padding: 2rem 1.5rem;
     cursor: pointer;
-        -webkit-transition: background-color 0.5s ease;
+    -webkit-transition: background-color 0.5s ease;
     -moz-transition: background-color 0.5s ease;
     transition: background-color 0.5s ease;
 }
@@ -120,6 +123,7 @@ button {
 
 .nav__logo > img {
     width: 78px;
+    height: 24px;
 }
 
 .nav__menu {
@@ -687,14 +691,14 @@ h2.skills-section-left-side__title {
     gap: 2rem;
 }
 
-.contact-section-right-side > div > p {
+.contact-section-right-side__container > p {
     font-size: 1rem;
     line-height: 120%;
     margin-bottom: 0.5rem;
     color: var(--black-dlc);
 }
 
-.contact-section-right-side > div > label > input {
+.contact-section-right-side__container > label > input {
     background: var(--black-dlc);
     color: #fff;
     font-size: 1rem;
@@ -705,11 +709,16 @@ h2.skills-section-left-side__title {
     box-sizing: border-box;
 }
 
-.contact-section-right-side > div:nth-child(3) > label > input {
+.contact-section-right-side__container:nth-child(3) > label > input {
     padding: 2rem 1rem;
 }
 
-.contact-section-right-side > div:nth-child(4) > button {
+.contact-section-right-side__container:nth-child(4) {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-section-right-side__container:nth-child(4) > button {
     padding: 1rem;
     cursor: pointer;
     background-color: transparent;
@@ -725,7 +734,7 @@ h2.skills-section-left-side__title {
     line-height: 150%;
 }
 
-.contact-section-right-side > div:nth-child(4) > button:hover {
+.contact-section-right-side__container:nth-child(4) > button:hover {
     color: #fff;
     background-color: var(--black-dlc);
     -webkit-animation: pulseOne 4.5s ease infinite;
@@ -834,13 +843,16 @@ h2._hidden {
     .gallery__item {
         flex-basis: 45%;
     }
-
 }
 
 @media screen and (max-width: 1024px) {
 
+    ._section {
+        padding: 2rem;
+    }
+
     .nav {
-        padding: 1rem;
+        padding: 0;
     }
 
     .nav__menu {
@@ -854,6 +866,16 @@ h2._hidden {
         transform: translateY(-800px);
         -webkit-transform: translateY(-800px);
         -moz-transform: translateY(-800px);
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+
+    .nav__menu_active {
+        position: fixed;
+        transform: translateY(86px);
+        -webkit-transform: translateY(86px);
+        -moz-transform: translateY(86px);
     }
 
     a.nav__link {
@@ -867,7 +889,7 @@ h2._hidden {
 
     .hero-section__content {
         height: auto;
-        padding: 4rem 2rem 0 0;
+        padding: 88px 2rem 0 0;
         justify-content: space-between;
         gap: 2rem;
         background-color: var(--black-dlc)
@@ -888,6 +910,263 @@ h2._hidden {
 
     .hero-section__text > h1 {
         font-size: 2rem;
+    }
+
+    .nav__hamburger {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 1.5rem;
+        box-sizing: border-box;
+        cursor: pointer;
+        -webkit-transition: background-color 0.5s ease;
+        -moz-transition: background-color 0.5s ease;
+        transition: background-color 0.5s ease;
+    }
+
+    .nav__hamburger-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .nav__hamburger:hover {
+        background-color: var(--black-dlc);
+    }
+
+    .nav__hamburger-line {
+        background: #fff;
+        display: block;
+        width: 1.5rem;
+        height: 3px;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+
+    .nav__hamburger-line_active-one {
+        transform: translateY(6px) rotate(45deg);
+        -webkit-transform: translateY(6px) rotate(45deg);
+        -moz-transform: translateY(6px) rotate(45deg);
+    }
+
+    .nav__hamburger-line_active-two {
+        transform: translateY(-5px) rotate(-45deg);
+        -webkit-transform: translateY(-5px) rotate(-45deg);
+        -moz-transform: translateY(-5px) rotate(-45deg);
+    }
+
+    h2.experience-section__title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .experience-section__items {
+        gap: 1rem;
+    }
+
+    .experience-section__card-title {
+        font-size: 5.5rem;
+    }
+
+    .experience-section__card-label {
+        font-size: 1.2rem;
+    }
+
+    .philosophy-section-left-side {
+        padding: 2rem;
+    }
+    
+    .philosophy-section-right-side__back > p {
+        font-size: 1.5rem;
+    }
+    
+    h2.philosophy-section-left-side__title {
+        font-size: 2rem;
+    }
+
+    p.philosophy-section-left-side__text {
+        margin-bottom: 4rem;
+    }
+
+    .skills-section__up-section {
+        flex-wrap: wrap;
+    }
+
+    .skills-section-left-side,
+    .skills-section-right-side {
+        width: 100%;
+    }
+
+    h2.skills-section-left-side__title {
+        font-size: 2rem;
+    }
+
+    .skills-section-left-side__second-section {
+        height: 270px;
+    }
+
+    .skills-section-right-side {
+        gap: 2rem 1.5rem;
+    }
+
+    .skills-section-right-side__card {
+        width: 48%;
+        flex-grow: 1;
+    }
+
+    .photo-section > h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .photo-section > p {
+        margin-bottom: 2rem;
+    }
+
+    .project-section-up-section__title {
+        font-size: 2rem;
+    }
+
+    .contact-section-left-side > h2 {
+        font-size: 2rem;
+    }
+
+    .contact-section__front {
+        gap: 5rem;
+    }
+
+    .footer-section {
+        margin: 0;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    ._section {
+        padding: 2rem 1rem;
+    }
+
+    .hero-section__content {
+        flex-wrap: wrap;
+        padding: 88px 0 2rem;
+    }
+
+    .hero-section__slider {
+        width: auto;
+        height: auto;
+        padding-top: 86.66%;
+    }
+
+    .hero-section__slide {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+
+    .hero-section__text {
+        padding: 0 1rem;
+    }
+
+    .experience-section__items {
+        flex-wrap: wrap;
+    }
+
+    .experience-section__card {
+        width: 100%;
+    }
+
+    .philosophy-section {
+        flex-wrap: wrap;
+    }
+
+    .philosophy-section-left-side,
+    .philosophy-section-right-side {
+        width: 100%;
+    }
+    
+    .philosophy-section-right-side {
+        height: 350px;
+    }
+
+    .skills-section-left-side__second-section {
+        height: 350px;
+    }
+
+    .photo-section__tab-container > ul {
+        flex-wrap: wrap;
+    }
+
+    .photo-section__tab-btn {
+        flex-basis: 35%;
+        flex-grow: 1;
+    }
+
+    .project-section-down-section__card > div:nth-child(2) {
+        padding: 1rem;
+    }
+
+    .contact-section__front {
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .contact-section-left-side,
+    .contact-section-right-side {
+        width: 100%;
+    }
+
+    .contact-section-left-side__pic {
+        display: none;
+    }
+
+    .contact-section-right-side > div > label > input {
+        width: 100%;
+    }
+
+    .contact-section__back > h4 {
+        font-size: 3rem;
+    }
+
+    .footer-section {
+        padding: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .nav {
+        height: 72px;
+    }
+
+    .nav__menu_active {
+        transform: translateY(70px);
+        -webkit-transform: translateY(70px);
+        -moz-transform: translateY(70px);
+    }
+
+    .hero-section__content {
+        padding: 72px 0 2rem;
+    }
+
+    .gallery__item {
+        flex-basis: 100%;
+    }
+
+    .project-section-down-section__card {
+        flex-basis: 100%;
+    }
+
+}
+
+@media screen and (max-width: 414px) {
+
+    .footer-section-right-side > p, .footer-section-right-side > a {
+        font-size: 0.3rem;
     }
 
 }

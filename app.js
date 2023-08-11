@@ -5,12 +5,14 @@ window.addEventListener('DOMContentLoaded', () => {
     }, 200)
 
     let counter = 1;
+    const nav = document.querySelector('.nav')
+    const navMenu = document.querySelector('.nav__menu');
+    const links = document.querySelectorAll('.nav__link');
 
     const fixedMenu = () => {
-        const nav = document.querySelector('.nav')
 
         window.addEventListener('scroll',  () => {
-            if(scrollY > 88) {
+            if(scrollY > 88 && !navMenu.classList.contains('nav__menu_active')) {
                 nav.classList.add('nav_fixed')
             } else {
                 nav.classList.remove('nav_fixed')
@@ -19,7 +21,6 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     const navMove = () => {
-        const links = document.querySelectorAll('.nav__link');
         const sections = document.querySelectorAll('section');
         const topOffSet = document.querySelector('.nav').offsetHeight;
         const homeLink = document.querySelector('.nav__logo');
@@ -142,7 +143,61 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     if (window.innerWidth < 1024) {
-        document.querySelector('.nav').before(document.querySelector('.nav__menu'));
+        
+        document.querySelector('.nav').before(navMenu);
+
+        function humburger () {
+            const hamburger = document.createElement('div');
+            hamburger.classList.add('nav__hamburger');
+            document.querySelector('.nav__logo').after(hamburger);
+
+            const wrapLine = document.createElement('div');
+            wrapLine.classList.add('nav__hamburger-wrap');
+            hamburger.prepend(wrapLine);
+            
+            for (i = 0; i < 2; i++) {
+                const createHamburgerLine = document.createElement('span');
+                createHamburgerLine.classList.add('nav__hamburger-line');
+                wrapLine.append(createHamburgerLine);
+            }
+
+            const allLinesHamburger = document.querySelectorAll('.nav__hamburger-line');
+
+            hamburger.addEventListener('click', () => {
+                navMenu.classList.toggle('nav__menu_active')
+                nav.classList.remove('nav_fixed');
+                allLinesHamburger[0].classList.toggle('nav__hamburger-line_active-one');
+                allLinesHamburger[1].classList.toggle('nav__hamburger-line_active-two');
+                
+            })
+
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('nav__menu_active')
+                    nav.classList.add('nav_fixed');
+                    allLinesHamburger[0].classList.remove('nav__hamburger-line_active-one');
+                    allLinesHamburger[1].classList.remove('nav__hamburger-line_active-two');
+                })
+            })
+
+            document.querySelectorAll('section').forEach(section => {
+                section.addEventListener('click', () => {
+                    navMenu.classList.remove('nav__menu_active')
+                    nav.classList.add('nav_fixed');
+                    allLinesHamburger[0].classList.remove('nav__hamburger-line_active-one');
+                    allLinesHamburger[1].classList.remove('nav__hamburger-line_active-two');
+                })
+            });
+
+            document.querySelector('.hero-section__content').addEventListener('click', () => {
+                navMenu.classList.remove('nav__menu_active')
+                nav.classList.add('nav_fixed');
+                allLinesHamburger[0].classList.remove('nav__hamburger-line_active-one');
+                allLinesHamburger[1].classList.remove('nav__hamburger-line_active-two');
+            })
+        }
+
+        humburger()
     }
     
     fixedMenu();
